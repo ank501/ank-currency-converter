@@ -10,8 +10,8 @@ export const currencyConverter = async ( fromCurr , toCurr ,Unit )=>{
         currencies: toCurr
     })
     
-    const multiplier = res.data[toCurr] * Unit;
-   return ({res,multiplier})
+    const ans = res.data[toCurr] * Unit;
+   return ({ fromCurr, toCurr ,Unit,res,ans})
 }
 
 currencyConverter("USD" , "INR" , 5 )
